@@ -1,0 +1,26 @@
+<scroll-view>
+<swiper class='.swiper' indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+  <block wx:for="{{bannerList}}" wx:key="unique">
+    <swiper-item>
+      <image src="{{url}}{{item.thumbnail}}" class="slide-image" bindtap="swipclick" data-postId="{{item.id}}" data-title="{{item.title}}" />
+    </swiper-item>
+  </block>
+</swiper>
+</scroll-view>
+
+<view class="menu_container">
+  <block wx:for="{{menus}}" wx:key="unique">
+    <view class="menu_item">
+      <view class='new-icon-circle {{item.class}}' bindtap="goItem" data-item='{{index}}'>
+        <image class="menu_icon" src="{{item.url}}" />
+      </view>
+      <text class="menu_name">{{item.name}}</text>
+    </view>
+  </block>
+</view>
+
+<block wx:for="{{newsList}}" wx:key="unique">
+
+  <van-card title="{{item.title}}" desc="{{item.brief}}" thumb="{{url}}{{item.thumbnail}}" bindtap="goNewsDetail" data-item="{{item}}">
+  </van-card>
+</block>

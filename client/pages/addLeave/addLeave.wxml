@@ -1,0 +1,33 @@
+<!--pages/addLeave/addLeave.wxml-->
+<i-alert type="warning" class="{{hideAlert?'hideAlert':'showAlert'}}" show-icon>
+    {{message}}
+</i-alert>
+<i-panel title="基础用法">
+  <picker bindchange="bindClassPickerChange" value="{{index}}" range="{{classInfos}}" range-key="name">
+    <view class="picker">
+      <i-input value="{{className}}" class="picker" title="请假班级" placeholder="选择请假班级" disabled />
+    </view>
+  </picker>
+
+    <picker bindchange="bindStudentPickerChange" value="{{index}}" range="{{students}}" range-key="name">
+    <view class="picker">
+      <i-input value="{{studentName}}" class="picker" title="请假学生" placeholder="选择学生" disabled />
+    </view>
+  </picker>
+
+   <picker mode="date" value="{{date}}" bindchange="bindDateChange">
+    <view class="picker">
+ <i-input value="{{ date }}"  start="2017-09-01" end="2060-09-01" title="请假日期" placeholder="选择日期" disabled/>    </view>
+  </picker>
+
+     <picker mode="time" value="{{time}}" start="06:00" end="22:00" bindchange="bindTimeChange">
+    <view class="picker">
+ <i-input value="{{ time }}"  title="请假时间" placeholder="选择时间" disabled/>    </view>
+  </picker>
+ 
+</i-panel>
+<i-panel title="无标题输入框">
+  <i-input  value="{{ content }}" type='textarea' placeholder="请输入请假原因" bindchange="contentInput"/>
+</i-panel>
+<i-button bind:click="handleClick" type="success">提交</i-button>
+<i-toast id="toast" />

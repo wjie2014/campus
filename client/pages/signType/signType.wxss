@@ -1,0 +1,54 @@
+/* pages/signType/signType.wxss */
+@import "../sign/sign.wxss";
+
+.activity {
+  background-color: white;
+  margin-bottom: 6px;
+}
+
+.activity .title {
+  padding: 8px;
+  font-weight: bold;
+}
+
+.activity .brief {
+  font-size: 16px;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-bottom: 20px;
+  text-indent: 2em;
+}
+
+.activity image {
+  width: 100%;
+}
+
+.activity .title .delete {
+  float: right;
+  color: red;
+}
+
+.sign-add {
+  padding: 5px;
+  background-color: white;
+  border-radius: 0rpx;
+  text-align: left;
+  padding-left: 20px;
+  margin-bottom: 6px;
+}
+
+.sign-bt {
+  background-color: white;
+  border-radius: 0rpx;
+  color: blue;
+  text-align: left;
+  font-weight: bold;
+  float: left;
+  width: 60%;
+  font-size: 16px;
+}
+
+.sign-all {
+  line-height: 2.55555556;
+  color: gray;
+}

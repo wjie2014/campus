@@ -1,0 +1,12 @@
+<!--pages/activity/activity.wxml-->
+<view class='activity'>
+<image src='{{url}}{{activity.thumbnail}}' mode='scaleToFill'></image>
+<view class='title'>
+     {{activity.title}}
+</view>
+<view class='brief'>{{activity.brief}}</view>
+  </view>
+
+  <view class='submitView'>
+  <button class="button-color bt" form-type="submit" bindtap='submit' data-id='{{activity.id}}'> 加入圈子 </button>
+</view>

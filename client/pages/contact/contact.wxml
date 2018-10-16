@@ -1,0 +1,13 @@
+<scroll-view scroll-y="true" style="height:{{scrollHeight}}px;"  class="i-index" >
+  <i-index height="100%" bind:change="onChange">
+    <i-index-item wx:for="{{ contactList }}" wx:for-index="index" id="{{index}}" wx:key="{{index}}" wx:for-item="item" name="{{item.title}}">
+      <i-cell-group>
+        <i-cell class="i-index-demo-item" catchtap="handleOpen1" data-phone="{{it.mobile}}" data-id="{{it.id}}"  data-parentIndex="{{index}}" data-myIndex="{{in}}" wx:for="{{item.item}}" wx:for-index="in" wx:key="{{in}}" wx:for-item="it" title="{{it.name}} ({{it.mobile}})" label="{{it.detail}}">
+        </i-cell>
+      </i-cell-group>
+    </i-index-item>
+  </i-index>
+
+</scroll-view>
+<i-action-sheet visible="{{ visible1 }}" actions="{{ actions1 }}" show-cancel bind:cancel="handleCancel1" bind:click="handleClickItem1" />
+<view class="circle-float" bindtap="addContact">+</view>

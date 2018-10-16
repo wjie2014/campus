@@ -1,0 +1,8 @@
+.button-color{
+  background-color: #2196F3;
+  color: white;
+}
+.button-color-red{
+   background-color: red;
+  color: white;
+}

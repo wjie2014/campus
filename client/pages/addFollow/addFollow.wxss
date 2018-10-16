@@ -1,0 +1,11 @@
+/* pages/addFollow/addFollow.wxss */
+.section {
+  padding: 20rpx;
+  background-color: white;
+}
+textarea {
+  width: 100%;
+}
+.submitView{
+  padding: 10px;
+}

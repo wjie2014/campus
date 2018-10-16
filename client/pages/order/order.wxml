@@ -1,0 +1,22 @@
+<view class="contact-body">
+
+ <block wx:for="{{orderList}}" wx:for-index="index" wx:key="unique">
+
+  <view class="post-container">
+    <view class="post-like">
+      <text class="post-title-front">{{item.name}}</text>
+      <text bindtap="calling" data-phone="{item.mobile}}" class='post-title-front-right'>{{item.mobile}}</text>
+      <text bindtap="calling"  class='post-like-font-right'>{{item.orderDate}}</text>
+    </view>
+    <text class="post-detail">任务详细：{{item.orderContent}}</text>
+    <text class="post-address">地址：{{item.address}}</text>
+    <view class='view-button'>
+    <view wx:if="{{item.status==1}}"><button class="post-button-ready mini-btn" size="mini">已完成</button></view>  
+       <view wx:if="{{item.status==0}}">
+       <button class="post-button-ready mini-btn" size="mini" id='{{item.id}}' index="{{index}}" bindtap='confirm' >确认任务</button>
+       <button class="post-button-delete mini-btn" size="mini" id='{{item.id}}' index="{{index}}"  bindtap='delete'>删除任务</button>
+       </view>
+    </view>
+  </view>
+  </block>
+</view>

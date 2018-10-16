@@ -1,0 +1,13 @@
+<view class="page" xmlns:wx="http://www.w3.org/1999/xhtml">
+  <form bindsubmit='submit'>
+    <i-panel title="基础用法">
+      <i-input value="{{ name }}" title="姓名" type='text' autofocus placeholder="请输入姓名" bindchange="nameInput"/>
+      <i-input value="{{ mobile }}" type="number" title="联系电话" placeholder="请输入手机号" bindchange="mobileInput"/>
+      <i-input value="{{ detail }}" type="textarea" title="详细信息" placeholder="请输入详细信息(最多50字)" maxlength="50" bindchange="detailInput" />
+    </i-panel>
+
+    <view class="weui-btn-area">
+      <i-button bind:click="submit" type="success">确定</i-button>
+    </view>
+</form>
+</view>

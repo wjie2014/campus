@@ -1,0 +1,29 @@
+<!--pages/notice/notice.wxml-->
+<view class='card-top'>
+<block wx:for="{{leaveList}}" wx:key="unique">
+  <view class="post-container ">
+    <view class='tag-status' wx:if="{{item.status==0}}">
+      <i-tag class="i-tags" color="red" name="已请假">
+        已请假
+      </i-tag>
+    </view>
+    <view class='tag-status' wx:if="{{item.status==1}}">
+      <i-tag class="i-tags" color="green" name="已完成">
+        已完成
+      </i-tag>
+    </view>
+    <text class="post-customer">所在班级：{{item.clazzName}}</text>
+    <text class="post-customer">学生姓名：{{item.studentName}}</text>
+    <text class="post-customer">请假原因：{{item.reason}}</text>
+    <text class="post-customer">请假日期：{{item.startDate}}</text>
+  </view>
+</block>
+<view class='loadMore' wx:if="{{hasNextPage==false}}" >
+  {{loadMoreText}}
+</view>
+</view>
+
+<i-tab-bar current="{{ current }}" bindchange="handleChange" fixed="true" color="green">
+  <i-tab-bar-item key="homepage" icon="editor" current-icon="editor" title="添加请假">
+  </i-tab-bar-item>
+</i-tab-bar>

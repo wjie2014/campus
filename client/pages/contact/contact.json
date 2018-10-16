@@ -1,0 +1,11 @@
+{
+  "enablePullDownRefresh": true,
+  "onReachBottomDistance":40,
+  "usingComponents": {
+    "i-index": "../../iView/dist/index/index",
+    "i-index-item": "../../iView/dist/index-item/index",
+    "i-cell-group": "../../iView/dist/cell-group/index",
+    "i-cell": "../../iView/dist/cell/index",
+    "i-action-sheet": "../../iView/dist/action-sheet/index"
+  }
+}

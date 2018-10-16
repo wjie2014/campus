@@ -1,0 +1,6 @@
+<view class="section">
+  <textarea placeholder="写评论" name="textarea" bindinput="contentInput" />
+</view>
+<view class='submitView'>
+  <button class="button-color bt" form-type="submit" bindtap='submit'> 发表评论 </button>
+</view>

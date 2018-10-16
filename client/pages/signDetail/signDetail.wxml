@@ -1,0 +1,92 @@
+<view class="weui_cells moments" bindtap='goDetail' data-sign='{{sign}}'>
+  <!-- 普通的post -->
+  <view class="weui_cell moments__post">
+    <view class="weui_cell_hd">
+      <image src="{{sign.avatarUrl}}"></image>
+    </view>
+    <view class="weui_cell_bd">
+      <!-- 人名链接 -->
+      <view class="title" href="javascript:;">
+        <view>{{sign.nickName}} </view>
+        <view class='time'>{{sign.createDate}}</view>
+      </view>
+      <!-- post内容 -->
+      <view id="paragraph" class="paragraph">
+        {{sign.content}}
+      </view>
+      <!-- 相册 -->
+      <view wx:if="{{sign.thumbnailsImgs.length > 0}}">
+        <view class="thumbnails">
+          <view class="thumbnail " wx:if="{{item.videoUrls!=null}}">
+            <video mode="aspectFill" src="{{url}}{{sign.videoUrls}}" data-id="{{index}}" data-now="{{mIndex}}" controls></video>
+          </view>
+          <block wx:for="{{sign.thumbnailsImgs}}" wx:key="unique">
+            <view class="thumbnail">
+              <image mode="aspectFill" src="{{url}}{{item}}" catchtap="imageShow" data-id="{{index}}"></image>
+            </view>
+          </block>
+        </view>
+      </view>
+      <view wx:if="{{sign.thumbnailsImgs.length ==0 && sign.videoUrls!=null&&sign.videoUrls!=''}}">
+        <view class="thumbnails">
+          <!-- 视频 -->
+          <video class='oneVideo' mode="aspectFill" src="{{url}}{{sign.videoUrls}}" data-id="{{index}}" data-now="{{mIndex}}" controls></video>
+        </view>
+      </view>
+      <view class="liketext">
+
+        <view class="comment" catchtap='likes' data-id='{{sign.id}}'>
+          <image wx:if="{{sign.likes ==false}}" data-id='{{sign.id}}' src='../images/heart.png'></image>
+          <image wx:if="{{sign.likes ==true}}" data-id='{{sign.id}}' src='../images/heart_selected.png'></image>
+          <view>
+            <view class='bt' wx:if="{{sign.likeSCount ==0}}">赞</view>
+            <view class='bt' wx:if="{{sign.likeSCount >0}}">{{sign.likeSCount}}</view>
+          </view>
+        </view>
+        <view class="comment" catchtap='comment' data-item='{{item}}'>
+          <image src='../images/message.png' />
+          <view>
+            <view class='bt'>评论</view>
+          </view>
+
+        </view>
+        <view class="comment">
+          <image src='../images/share.png' />
+          <view>
+            <button class='bt share' open-type="share" data-item='{{item}}'>分享</button>
+          </view>
+        </view>
+      </view>
+    </view>
+
+  </view>
+</view>
+<view class='likes-view'>
+
+  <image class="likes-icon" src='../images/heart.png' />
+  <block wx:for="{{wxUsers}}" wx:key="unique">
+    <image class="likes-image" src='{{item.avatarUrl}}' />
+  </block>
+</view>
+
+<view class="weui_cells moments">
+  <block wx:for="{{comments}}" wx:key="unique">
+    <view class="weui_cell moments__post comment-view">
+
+      <view class="weui_cell_hd">
+        <image class="likes-image" src='{{item.avatarUrl}}' />
+      </view>
+      <!-- 人名链接 -->
+      <view class="weui_cell_bd comment-area">
+        <view class="title" href="javascript:;">
+          <view><text class='nickName'>{{item.nickName}}</text> <text class='flow'>{{index+1}}楼</text></view>
+          <view class='time'>{{item.createDate}}</view>
+        </view>
+        <!-- post内容 -->
+        <view id="paragraph" class="paragraph">
+          {{item.content}}
+        </view>
+      </view>
+    </view>
+  </block>
+</view>

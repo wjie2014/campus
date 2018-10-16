@@ -1,0 +1,20 @@
+{
+  "usingComponents": {
+    "i-tab-bar": "../../iView/dist/tab-bar/index",
+    "i-tab-bar-item": "../../iView/dist/tab-bar-item/index",
+    "i-cell-group": "../../iView/dist/cell-group/index",
+    "i-cell": "../../iView/dist/cell/index",
+    "i-card": "../../iView/dist/card/index",
+    "i-tag": "../../iView/dist/tag/index",
+    "i-button": "../../iView/dist/button/index",
+    "i-collapse": "../../iView/dist/collapse/index",
+    "i-collapse-item": "../../iView/dist/collapse-item/index",
+    "i-checkbox-group": "../../iView/dist/checkbox-group/index",
+    "i-checkbox": "../../iView/dist/checkbox/index",
+    "i-row": "../../iView/dist/row/index",
+    "i-col": "../../iView/dist/col/index",
+    "i-rate": "../../iView/dist/rate/index",
+    "i-toast": "../../iView/dist/toast/index"
+  },
+      "i-panel": "../../iView/dist/panel/index"
+}

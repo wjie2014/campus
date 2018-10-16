@@ -1,0 +1,9 @@
+<!--index.wxml-->
+<view class="container ach">
+  <ec-canvas id="mychart-dom-pie" canvas-id="mychart-pie" ec="{{ec}}"></ec-canvas>
+</view>
+<view class='menu_container'>
+  <block wx:for="{{dataSubject}}" wx:key="unique">
+    <text class='menu_item'>{{item.name}}</text>
+  </block>
+</view>

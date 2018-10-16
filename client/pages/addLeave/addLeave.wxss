@@ -1,0 +1,8 @@
+/* pages/addLeave/addLeave.wxss */
+
+.hideAlert{
+  display: none;
+}
+.showAlert{
+  display: block;
+}

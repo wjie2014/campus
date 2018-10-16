@@ -1,0 +1,7 @@
+
+.hideAlert{
+  display: none;
+}
+.showAlert{
+  display: block;
+}

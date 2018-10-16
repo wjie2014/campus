@@ -1,0 +1,26 @@
+<!--pages/find/find.wxml-->
+
+<block wx:for="{{acticitys}}" wx:for-index="index" wx:key="unique">
+
+  <view class="list_item" bindtap='goActivity' data-item='{{item}}'>
+
+    <view class='cover'>
+      <image src='{{url}}{{item.thumbnail}}'></image>
+    </view>
+
+    <view class="cont">
+      <text class="title">{{item.title}}</text>
+      <text class='desc'>{{item.brief}}</text>
+    </view>
+  </view>
+
+</block>
+
+<view class="body-view">
+  <loading hidden="{{hidden}}" bindchange="loadingChange">
+    加载中...
+  </loading>
+</view>
+<view class='loadMore' hidden='{{hiddenMore}}'>
+  {{loadMoreText}}
+</view>

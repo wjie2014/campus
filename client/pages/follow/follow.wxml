@@ -1,0 +1,26 @@
+<!--pages/follow/follow.wxml-->
+<view class='card-top'>
+    <i-cell-group>
+
+  <block wx:for="{{followUpList}}" wx:key="unique">
+    <i-cell title="{{item.createDate}}" label="{{item.content}}" is-link></i-cell>
+
+  </block>
+     </i-cell-group>
+
+</view>
+
+<i-tab-bar current="{{ current }}" bindchange="handleChange" fixed="true" color="green">
+  <i-tab-bar-item key="homepage" icon="editor" current-icon="editor" title="现在写">
+  </i-tab-bar-item>
+</i-tab-bar>
+
+
+<!-- <view class="body-view">
+  <loading hidden="{{hidden}}" bindchange="loadingChange">
+    加载中...
+  </loading>
+</view>
+<view class='loadMore' hidden='{{hiddenMore}}'>
+  {{loadMoreText}}
+</view> -->

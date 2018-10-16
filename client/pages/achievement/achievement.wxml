@@ -1,0 +1,21 @@
+
+
+<block wx:for="{{achievements}}" wx:key="unique">
+  <view class="post-container menu_container" bindtap='goMyAchievement' data-item='{{item}}'>
+  <view wx:if="{{index<3}}" class='logo'>♚</view>
+  <view wx:if="{{index>=3&&index<10}}" class='logo2'>✿</view>
+    <view wx:if="{{index>=10}}" class='logo3'>❄</view>
+
+  <view class='post-title-back menu_item'>{{item.name}} </view>
+     <view class='post-title-back menu_item'> 班级排名：{{index+1}}  </view>
+      <view class='post-title-back menu_item'>  总分：{{item.sum}}</view>
+  </view>
+</block>
+<view class="body-view">
+  <loading hidden="{{hidden}}" bindchange="loadingChange">
+    加载中...
+  </loading>
+</view>
+<view class='loadMore' hidden='{{hiddenMore}}'>
+  {{loadMoreText}}
+</view>

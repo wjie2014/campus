@@ -1,0 +1,19 @@
+/* pages/comment/comment.wxss */
+.section{
+  margin: 10px;
+    border:1px solid gainsboro;
+  border-radius:5px;
+      padding: 10px;
+
+}
+.submitView {
+  position: fixed;
+  bottom: 0rpx;
+  width: 100%;
+}
+textarea{	
+    width: 100%;
+}
+.bt {
+  border-radius: 0rpx;
+}

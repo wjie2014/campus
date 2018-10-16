@@ -1,0 +1,58 @@
+/* pages/achievementList/achievementList.wxss */
+.list{
+  border-radius:5px;
+  color: white;
+  padding-top: 40px;
+  padding-bottom:40px; 
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 8px;
+  margin-bottom:2px; 
+  text-align: center;
+  font-weight: 500;
+}
+.listColor0{
+  background-color:#54ade8;
+}
+.listColor1{
+  background-color:#FF5722;
+}
+.listColor2{
+  background-color:#5FB878;
+}
+.listColor3{
+  background-color:#FF5983;  
+
+}
+.listColor4{
+  background-color:#009688;
+}
+.listColor5{
+  background-color:#F7B824;
+}
+
+.listColor6{
+background-color:#2F4056;
+}
+
+.listColor7{
+background-color:#8a93f7;
+}
+.listColor8{
+background-color:#a82f5a;
+}
+.listColor9{
+background-color:#f45c93;
+}
+.listColor10{
+background-color:#f6eb77;
+}
+.listColor11{
+background-color:#abe0ff;
+}
+.listColor12{
+background-color:#2db3a0;
+}
+
+
+

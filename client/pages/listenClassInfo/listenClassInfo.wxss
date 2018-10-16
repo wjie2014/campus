@@ -1,0 +1,11 @@
+/* pages/listenClassInfo/listenClassInfo.wxss */
+.card{
+  margin-top: 6px;
+  margin-bottom: 6px;
+}
+.card-top{
+  padding-bottom: 50px;
+}
+.tag{
+  margin: 0 16px;
+}

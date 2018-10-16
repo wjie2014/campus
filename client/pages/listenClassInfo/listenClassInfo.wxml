@@ -1,0 +1,18 @@
+<!--pages/listenClassInfo/listenClassInfo.wxml-->
+<view class='card-top'>
+  <block wx:for="{{listenClassInfos}}" wx:key="unique">
+    <view class="card" bindtap='goDetail' data-item='{{item}}'>
+     <i-tag wx:if="{{item.status==1}}" class="i-tags tag" name="单个标签"  color="green"> 已完成</i-tag>
+     <i-tag wx:if="{{item.status==0}}" class="i-tags tag" name="单个标签"  color="red"> 未开始</i-tag>
+      <i-card title="{{item.teacherName}}" extra="{{item.listenDate}}">
+        <view slot="content">{{item.subjectName}} ({{item.clazzName}}) </view>
+        <view slot="footer">{{item.content}}</view>
+      </i-card>
+    </view>
+  </block>
+</view>
+
+
+<i-tab-bar current="{{ current }}" wx:if="{{idAdd}}" bindchange="handleChange" fixed="true" color="#19be6b">
+  <i-tab-bar-item key="homepage" icon="editor" current-icon="editor" title="添加"></i-tab-bar-item>
+</i-tab-bar>

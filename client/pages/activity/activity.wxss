@@ -1,0 +1,29 @@
+/* pages/activity/activity.wxss */
+.activity{
+  background-color: white;
+  margin-bottom: 6px;
+}
+.activity .title{
+  padding: 8px;
+  font-weight: bold;
+}
+.activity .brief{
+  font-size: 16px;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-bottom: 20px;
+  text-indent:2em;
+}
+.activity image{
+  width: 100%;
+}
+.submitView {
+  position: fixed;
+  bottom: 0rpx;
+  width: 100%;
+}
+
+.bt {
+  border-radius: 0rpx;
+  background-color: #19be6b;
+}

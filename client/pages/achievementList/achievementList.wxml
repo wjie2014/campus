@@ -1,0 +1,6 @@
+<!--pages/achievementList/achievementList.wxml-->
+<block wx:for="{{examTimes}}" wx:key="unique">
+<view class='list listColor{{index}}' bindtap='goAchievement' data-id='{{item.id}}' data-name='{{item.name}}'>
+ {{item.name}}
+</view>
+</block>

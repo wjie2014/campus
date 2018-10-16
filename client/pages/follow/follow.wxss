@@ -1,0 +1,53 @@
+/* pages/follow/follow.wxss */
+
+.sign-add {
+  padding: 5px;
+  background-color: white;
+  border-radius: 0rpx;
+  text-align: left;
+  padding-left: 20px;
+  margin-bottom: 6px;
+}
+
+.sign-bt {
+  background-color: white;
+  border-radius: 0rpx;
+  color: blue;
+  text-align: left;
+  font-weight: bold;
+  float: left;
+  width: 60%;
+  font-size: 16px;
+}
+
+.sign-all {
+  line-height: 2.55555556;
+  color: gray;
+}
+
+.brief {
+  font-size: 16px;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-bottom: 20px;
+  text-indent: 2em;
+}
+
+.date{
+  color: #888888;  
+}
+.content{
+  color: #353535;
+ 
+}
+/* pages/listenClassInfo/listenClassInfo.wxss */
+.card{
+  margin-top: 6px;
+  margin-bottom: 6px;
+}
+.card-top{
+  padding-bottom: 50px;
+}
+.tag{
+  margin: 0 16px;
+}

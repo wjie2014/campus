@@ -1,0 +1,12 @@
+/* pages/addListenClassInfoEvaluate/addListenClassInfoEvaluate.wxss */
+
+.level {
+  line-height: 1.4;
+  font-size: 14px;
+  padding:7px 15px;
+  color: #495060;
+}
+
+.level-group {
+  padding-left: 10px;
+}

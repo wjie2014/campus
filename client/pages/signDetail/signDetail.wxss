@@ -1,0 +1,48 @@
+@import "../sign/sign.wxss";
+
+.likes-image {
+  width: 32px !important;
+  height: 32px !important;
+  border-radius: 16px;
+  margin: 1px;
+}
+
+.likes-view {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: white;
+  padding: 10px;
+}
+
+.likes-icon {
+  width: 20px;
+  height: 20px;
+  padding: 6px;
+}
+
+.comment-view {
+  border-top: 1px solid whitesmoke;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.comment-view image {
+  width: 32px !important;
+  height: 32px !important;
+  border-radius: 16px;
+  margin: 1px;
+}
+
+.comment-view .paragraph {
+  margin-bottom: 0px;
+}
+
+.comment-area{
+  width: 100%;
+}
+.comment-area .title .flow{
+  float: right;
+}
+.comment-area .title .nickName{
+  float: left;
+}

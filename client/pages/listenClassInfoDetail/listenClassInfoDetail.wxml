@@ -1,0 +1,71 @@
+<!--pages/listenClassInfoDetail/listenClassInfoDetail.wxml-->
+<view class='card-top'>
+  <view class="card" bindtap='goDetail' data-item='{{listenClassInfo}}'>
+    <i-tag wx:if="{{listenClassInfo.status==1}}" class="i-tags tag" name="单个标签" color="green"> 已完成</i-tag>
+    <i-tag wx:if="{{listenClassInfo.status==0}}" class="i-tags tag" name="单个标签" color="red"> 未开始</i-tag>
+    <i-card title="{{listenClassInfo.teacherName}}" extra="{{listenClassInfo.listenDate}}" full="true">
+      <view slot="content">{{listenClassInfo.subjectName}} ({{listenClassInfo.clazzName}}) </view>
+      <view slot="footer">{{listenClassInfo.content}}</view>
+    </i-card>
+  </view>
+</view>
+<view class="caption-wrap choose" wx:if="{{addTeacherFlag}}">
+  <i-collapse name="name1">
+    <i-collapse-item title="选择听课教师" name="name1">
+      <view slot="content">
+        <i-panel>
+          <i-row>
+            <i-col span="12" wx:for="{{teachers}}" position="{{position}}" wx:key="{{item.id}}" value="{{item.name}}" i-class="col-class">
+              <i-checkbox-group current="{{current}}" bindchange="handleFruitChange" data-tearcherid="{{item.id}}">
+                <i-checkbox value='{{item.name}}'></i-checkbox>
+              </i-checkbox-group>
+            </i-col>
+
+          </i-row>
+          <i-button bind:click="submit" type="success">保存</i-button>
+
+        </i-panel>
+      </view>
+    </i-collapse-item>
+  </i-collapse>
+</view>
+<view class="caption-wrap choose">
+</view>
+<view class="evaluateTitle">
+<i-row>
+    <i-col span="16" i-class="col-class">本课评价</i-col>
+    <i-col span="8" i-class="col-class evaluateButton" bindtap="addEvaluate" wx:if="{{addEvaluateFlag}}">评价</i-col>
+</i-row>
+</view>
+<view class="weui_cells moments">
+
+  <block wx:for="{{evaluationClassInfos}}" wx:key="unique">
+     <view class="weui_cell moments__post comment-view">
+    <!-- 人名链接 -->
+    <view class="weui_cell_bd comment-area">
+      <view class="title" href="javascript:;">
+        <view>
+          <text class='nickName logo'>♚ </text>
+          <text class='nickName'>{{item.teacherName}}</text>
+          <text class='flow'>{{item.evaluateDate}}</text>
+        </view>
+      </view>
+      <!-- post内容 -->
+      <i-rate disabled="true" value="{{item.level}}"></i-rate>
+      <view id="paragraph" class="paragraph">
+        学生表现：{{item.studentPerformance}}
+      </view>
+      <view id="paragraph" class="paragraph">
+        教师表现：{{item.teacherPerformance}}
+      </view>
+       <view id="paragraph" class="paragraph">
+        综合表现：{{item.comprehensivePerformance}}
+      </view>
+       <view id="paragraph" class="paragraph">
+        听课建议：{{item.advise}}
+      </view>
+    </view>
+  </view>
+  </block>
+</view>
+<i-toast id="toast" />

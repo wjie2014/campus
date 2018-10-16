@@ -1,0 +1,110 @@
+<!--pages/sign/sign.wxml-->
+<!-- <cover-view class="circle-float" >
+
+<button  class="circle-float" open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="add">+</button>
+</cover-view> -->
+<view class='top'>
+<view class='activity'>
+<image src='{{url}}{{activity.thumbnail}}' mode='scaleToFill'></image>
+<view class='title'>
+     {{activity.title}} <text class='delete' catchtap='delete' data-id='{{activity.id}}'>取消圈子</text>
+</view>
+<view class='brief'>{{activity.brief}}</view>
+  </view>
+  <view class='sign-add'>
+  <button class="button-color sign-bt" open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="add" data-id='{{activity.id}}'>⏱ 现在打卡</button>
+  <text class='sign-all'>火热打卡中</text>
+</view>
+<block wx:for="{{signList}}" wx:key="unique" wx:for-index="mIndex">
+
+  <view class="weui_cells moments" >
+    <!-- 普通的post -->
+    <view class="weui_cell moments__post">
+      <view class="weui_cell_hd" bindtap='goDetail' data-item='{{item}}'>
+        <image src="{{item.avatarUrl}}"></image>
+      </view>
+      <view class="weui_cell_bd">
+        <view class="title" href="javascript:;" bindtap='goDetail' data-item='{{item}}'>
+          <view>{{item.nickName}} </view>
+          <view class='time'>{{item.createDate}}</view>
+        </view>
+        <view id="paragraph" class="paragraph">
+          {{item.content}}
+        </view>
+        <!-- 伸张链接 -->
+        <!-- <view id="paragraphExtender" class="paragraphExtender">显示全文</view> -->
+        <!-- 相册 -->
+
+        <view wx:if="{{item.thumbnailsImgs.length > 0}}">
+          <view class="thumbnails">
+            <!-- 视频 -->
+            <view class="thumbnail " wx:if="{{item.videoUrls!=null&&item.videoUrls!=''}}">
+              <video class='unVideo' mode="aspectFill" src="{{url}}{{item.videoUrls}}" data-id="{{index}}" data-now="{{mIndex}}" bindended='bindended' bindplay='bindplay' controls></video>
+            </view>
+            <block wx:for="{{item.thumbnailsImgs}}" wx:key="unique" wx:for-item="img">
+              <view class="thumbnail">
+                <image mode="aspectFill" src="{{url}}{{img}}" catchtap="imageShow" data-id="{{index}}" data-now="{{mIndex}}"></image>
+              </view>
+            </block>
+          </view>
+        </view>
+       <view wx:if="{{item.thumbnailsImgs.length ==0 && item.videoUrls!=null&&item.videoUrls!=''}}">
+          <view class="thumbnails">
+            <!-- 视频 -->
+            <video bindended='bindended' bindplay='bindPlay' objectFit='cover' class="onlyVideo" mode="aspectFill" src="{{url}}{{item.videoUrls}}" data-id="{{index}}" data-now="{{mIndex}}" controls></video>
+          </view>
+        </view>
+        <!-- 资料条  -->
+        <!-- <view class="toolbar">
+        <view class="timestamp">回忆中的未来</view>
+        <view>
+          <view id="actionMenu" class="actionMenu slideIn">
+            <view class="actionBtn" id="btnLike">
+              <view class="icon icon-96"></view>
+            </view>
+          </view>
+          <view class="actionBtn" id="btnComment">
+            <view class="icon icon-3"></view>
+          </view>
+        </view>
+      </view>
+      <view id="actionToggle" class="actionToggle">..</view> -->
+        <!-- 赞／评论区 -->
+
+        <view class="liketext">
+
+          <view class="comment" catchtap='likes' data-id='{{item.id}}'>
+            <image wx:if="{{item.likes ==false}}" data-id='{{item.id}}' src='../images/heart.png'></image>
+            <image wx:if="{{item.likes ==true}}" data-id='{{item.id}}' src='../images/heart_selected.png'></image>
+            <view>
+              <view class='bt' wx:if="{{item.likeSCount ==0}}">赞</view>
+              <view class='bt' wx:if="{{item.likeSCount >0}}">{{item.likeSCount}}</view>
+            </view>
+          </view>
+ <view class="comment" catchtap='comment' data-item='{{item}}'>            <image src='../images/message.png' />
+            <view>
+ <view class='bt' wx:if="{{item.commentCount ==0}}">评论</view>
+              <view class='bt' wx:if="{{item.commentCount >0}}">{{item.commentCount}}</view>            </view>
+
+          </view>
+          <view class="comment">
+            <image src='../images/share.png' />
+             <view>
+              <button class='bt share' open-type="share" data-item='{{item}}'>分享</button>
+            </view>
+          </view>
+        </view>
+      </view>
+
+    </view>
+  </view>
+</block>
+<view class="body-view">
+  <loading hidden="{{hidden}}" bindchange="loadingChange">
+    加载中...
+  </loading>
+</view>
+
+<view class='loadMore' hidden='{{hiddenMore}}'>{{loadMoreText}}</view> 
+
+</view>

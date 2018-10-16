@@ -1,0 +1,7 @@
+<!--pages/addFollow/addFollow.wxml-->
+<view class="section">
+  <textarea placeholder="写下你此刻的感想..." maxlength='-1' name="textarea" bindinput="contentInput" />
+</view>
+<view class='submitView'>
+  <i-button bind:click="submit" type="success">发表</i-button>
+</view>

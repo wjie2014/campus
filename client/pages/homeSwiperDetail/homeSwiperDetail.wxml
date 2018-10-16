@@ -1,0 +1,8 @@
+<import src="../../wxParse/wxParse.wxml"/>
+<view class='detail'>
+{{article.title}}
+<image src="{{article.thumbnail}}" class="slide-image" />
+<view class='content'>
+  <template is="wxParse" data="{{wxParseData:content.nodes}}"/>
+</view>
+</view>

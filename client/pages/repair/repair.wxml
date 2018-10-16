@@ -1,0 +1,24 @@
+<!--pages/repair/repair.wxml-->
+<view class='card-top'>
+<block wx:for="{{repairList}}" wx:key="unique">
+  <view class="post-container">
+   <i-tag class="i-tags tag" wx:if="{{item.status==1}}" name="单个标签"  color="yellow"> {{item.statusName}}</i-tag>
+   <i-tag class="i-tags tag" wx:if="{{item.status==2}}" name="单个标签"  color="blue"> {{item.statusName}}</i-tag>
+   <i-tag class="i-tags tag" wx:if="{{item.status==3}}" name="单个标签"  color="green"> {{item.statusName}}</i-tag>
+  <i-card title="{{item.applicantName}} [{{item.typeName    }}]"  extra="{{item.repairDate}}" >
+    <view slot="content">{{item.address}}</view>
+    <view slot="content">{{item.description}}</view>
+    <view slot="footer">{{item.remarks}}</view>
+  </i-card>
+  </view>
+</block>
+<view class='loadMore' wx:if="{{hasNextPage==false}}">
+  {{loadMoreText}}
+</view>
+</view>
+
+
+<i-tab-bar current="0" bindchange="handleChange" fixed="true" color="green">
+  <i-tab-bar-item key="homepage" icon="editor" current-icon="editor" title="添加报修">
+  </i-tab-bar-item>
+</i-tab-bar>

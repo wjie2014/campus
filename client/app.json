@@ -1,0 +1,80 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/contact/contact",
+    "pages/index/index",
+    "pages/addCgi/addCgi",
+    "pages/addContact/addContact",
+    "pages/editContact/editContact",
+    "pages/addOrder/addOrder",
+    "pages/order/order",
+    "pages/userInfo/userInfo",
+    "pages/homeSwiperDetail/homeSwiperDetail",
+    "pages/sign/sign",
+    "pages/signType/signType",
+    "pages/addSign/addSign",
+    "pages/signDetail/signDetail",
+    "pages/comment/comment",
+    "pages/auth/auth",
+    "pages/find/find",
+    "pages/activity/activity",
+    "pages/achievement/achievement",
+    "pages/achievementDetail/achievementDetail",
+    "pages/achievementList/achievementList",
+    "pages/follow/follow",
+    "pages/addFollow/addFollow",
+    "pages/addListenClassInfo/addListenClassInfo",
+    "pages/listenClassInfo/listenClassInfo",
+    "pages/listenClassInfoDetail/listenClassInfoDetail",
+    "pages/addListenClassInfoEvaluate/addListenClassInfoEvaluate",
+    "pages/leave/leave",
+    "pages/newsDetail/newsDetail",
+    "pages/addLeave/addLeave",
+    "pages/addRepair/addRepair",
+    "pages/repair/repair"
+      
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#FF6666",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "",
+    "backgroundColor": "#eeeeee",
+    "backgroundTextStyle": "light",
+    "navigationStyle": "default"
+  },
+  "tabBar": {
+    "color": "#757575",
+    "selectedColor": "#FF6666",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "pages/images/home_red_back.png",
+        "selectedIconPath": "pages/images/home_red_front.png"
+      },
+      {
+        "pagePath": "pages/sign/sign",
+        "text": "圈子",
+        "iconPath": "pages/images/circle_red_back.png",
+        "selectedIconPath": "pages/images/circle_red_front.png"
+      },
+      {
+        "pagePath": "pages/find/find",
+        "text": "发现",
+        "iconPath": "pages/images/dis_red_back.png",
+        "selectedIconPath": "pages/images/dis_red_front.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "我的",
+        "iconPath": "pages/images/me_red_back.png",
+        "selectedIconPath": "pages/images/me_red_front.png"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true
+}

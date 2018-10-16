@@ -1,0 +1,84 @@
+/* pages/addSign/addSign.wxss */
+
+.view_hide {
+  display: none;
+}
+
+.view_show {
+  display: block;
+}
+
+.section {
+  padding: 20rpx;
+  background-color: white;
+  padding-bottom: 40px;
+}
+
+page {
+  background: #f6f6f6;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.weui-uploader__video {
+  /* width: 120px;
+  height: 80px; */
+  width: 80%;
+  height: 120px;
+  margin-bottom: 4px;
+}
+
+.weui-uploader__video_view {
+  border-bottom:  1px solid #d9d9d9;
+  margin-bottom: 10px;
+}
+
+textarea {
+  width: 100%;
+}
+
+.submitView {
+  position: fixed;
+  bottom: 0rpx;
+  width: 100%;
+}
+
+.bt {
+  border-radius: 0rpx;
+}
+
+.addView {
+  width: 47px;
+  height: 47px;
+  padding: 15px;
+}
+
+.addView-border {
+  float: left;
+  position: relative;
+  margin-right: 9px;
+  margin-bottom: 9px;
+  width: 77px;
+  height: 77px;
+  border: 1px solid #d9d9d9;
+  border-radius: 3px;
+}
+
+.section-image {
+  margin-top: 20rpx;
+}
+
+.img {
+  margin-top: 20rpx;
+}
+
+.weui-uploader__image {
+  float: left;
+  position: relative;
+  margin-right: 9px;
+  margin-bottom: 9px;
+  width: 77px;
+  height: 77px;
+  border: 0px solid #d9d9d9;
+}

@@ -1,0 +1,76 @@
+{
+	"client": "client/",
+	"svr": "server/",
+	"miniprogramRoot": "client/",
+	"qcloudRoot": "server/",
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"appid": "wx1241f41b037fec7c",
+	"projectname": "Sheng_Yi_housekeeper",
+	"compileType": "miniprogram",
+	"libVersion": "2.2.4",
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"list": []
+		},
+		"miniprogram": {
+			"current": 5,
+			"list": [
+				{
+					"id": 0,
+					"name": "测试",
+					"pathName": "pages/listenClassInfo/listenClassInfo",
+					"query": "",
+					"scene": "1078"
+				},
+				{
+					"id": -1,
+					"name": "听课",
+					"pathName": "pages/addListenClassInfo/addListenClassInfo",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "听课详细",
+					"pathName": "pages/listenClassInfoDetail/listenClassInfoDetail",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "评价",
+					"pathName": "pages/addListenClassInfoEvaluate/addListenClassInfoEvaluate",
+					"query": ""
+				},
+				{
+					"id": 4,
+					"name": "请假",
+					"pathName": "pages/leave/leave",
+					"query": ""
+				},
+				{
+					"id": 5,
+					"name": "报修列表",
+					"pathName": "pages/repair/repair",
+					"query": ""
+				}
+			]
+		}
+	}
+}

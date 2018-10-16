@@ -1,0 +1,25 @@
+<!--pages/addListenClassInfoEvaluate/addListenClassInfoEvaluate.wxml-->
+
+
+<i-panel title="基础用法">
+  <i-input value="{{studentPerformance}}" bindchange="studentPerformanceInput" type="textarea" title="学生表现" placeholder="请输入学生表现" maxlength="600" />
+  <i-input value="{{teacherPerformance}}" bindchange="teacherPerformanceInput" type="textarea" title="教师表现" placeholder="请输入教师表现" maxlength="600" />
+  <i-input value="{{comprehensivePerformance}}" bindchange="comprehensivePerformanceInput" type="textarea" title="综合表现" placeholder="请输入综合表现" maxlength="600" />
+  <i-input value="{{advise}}" bindchange="adviseInput" type="textarea" title="听课建议" placeholder="请输入听课建议" maxlength="600" />
+</i-panel>
+
+<view class="level">
+<i-row >
+  <i-col span="12" i-class="col-class">评价等级</i-col>
+  <i-col span="12" i-class="col-class">
+      <i-cell title="手势touch选择星" class="level-group">
+        <i-rate bind:change="onChange" value="{{starIndex}}" size="30">
+        </i-rate>
+      </i-cell>
+  </i-col>
+</i-row>
+</view>
+
+
+<i-button bind:click="handleClick" type="success">提交</i-button>
+<i-toast id="toast" />
